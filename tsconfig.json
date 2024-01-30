@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
     "lib": ["ESNext"],
-    "module": "esnext",
-    "target": "esnext",
-    "moduleResolution": "bundler",
-    "moduleDetection": "force",
+    "module": "commonjs",
+    "target": "es2020",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "composite": true,
@@ -20,10 +19,8 @@
       "@shared/*": ["./src/"],
       "@auth/*": ["./src/"]
     },
-    "types": [
-      "bun-types" // add Bun global
-    ]
+    "types": ["bun-types"]
   },
-   "include": ["src/**/*.ts", "test/**/*.spec.ts"],
-   "exclude": ["node_modules"] 
+  "include": ["src/**/*.ts", "test/**/*.spec.ts"],
+  "exclude": ["node_modules"] 
 }
