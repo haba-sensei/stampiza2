@@ -1,1 +1,0 @@
-# stampiza2
