@@ -16,9 +16,9 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "paths": {
-      "@modules/*": ["./src/modules/*"],
-      "@shared/*": ["./src/shared/*"],
-      "@auth/*": ["./src/modules/Auth/*"]
+      "@modules/*": ["./src/"],
+      "@shared/*": ["./src/"],
+      "@auth/*": ["./src/"]
     },
     "types": [
       "bun-types" // add Bun global

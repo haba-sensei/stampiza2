@@ -35,18 +35,19 @@
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
     "husky": "^8.0.3",
     "jsonwebtoken": "^9.0.2",
     "module-alias": "^2.2.3",
     "mongoose": "^7.5.0",
+    "mongoose-paginate-v2": "^1.8.0",
     "test": "^3.3.0"
   },
   "_moduleAliases": {
-    "@modules": "src/modules",
-    "@shared": "src/shared",
-    "@auth": "src/modules/Auth"
+    "@modules": "./src/",
+    "@shared": "./src/",
+    "@auth": "./src/"
   }
 }
