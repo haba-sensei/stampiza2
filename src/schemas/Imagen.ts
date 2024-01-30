@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import mongoosePaginate from 'mongoose-paginate-v2';
+import { ImagenDocument, ImagenModel } from '../interfaces/imagen';
 
 const { Schema } = mongoose;
 
@@ -12,6 +13,7 @@ const imagenSchema = new Schema({
 });
 
 imagenSchema.plugin(mongoosePaginate);
-const Imagen = mongoose.model('Imagen', imagenSchema);
+
+const Imagen = mongoose.model<ImagenDocument, ImagenModel>('Imagen', imagenSchema);
 
 export default Imagen;

@@ -1,5 +1,5 @@
 import express from 'express';
-import SubCategoria from '../schemas/SubCategoria.js';
+import SubCategoria from '../schemas/SubCategoria';
 
 const router = express.Router();
 

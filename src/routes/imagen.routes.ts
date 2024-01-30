@@ -1,5 +1,5 @@
 import express from 'express';
-import Imagen from '../schemas/Imagen.js';
+import Imagen from '../schemas/Imagen';
 
 const router = express.Router();
 
@@ -16,14 +16,17 @@ router.route('/insertar').post(async (req, res) => {
 
 router.get('/buscar/:subCategoriaId', async (req, res) => {
     try {
-        const subCategoriaId = req.params.subCategoriaId;
-        const pagina = parseInt(req.query.pagina) || 1;
-        const limite = parseInt(req.query.limite) || 10;
+        const subCategoriaId = req.params.subCategoriaId; 
+        const reqPagina = typeof req.query.pagina === 'string' ? req.query.pagina : '1';
+        const reqLimite = typeof req.query.limite === 'string' ? req.query.limite : '10';
+
+        const pagina = parseInt(reqPagina);
+        const limite = parseInt(reqLimite);
 
         const opciones = {
             page: pagina,
             limit: limite,
-            sort: { nombre: 1 }, // Ordenar alfabéticamente por 'nombre'
+            sort: { nombre: 1 },
         };
 
         const imagenes = await Imagen.paginate({ subCategoria: subCategoriaId }, opciones);

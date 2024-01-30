@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "bun --hot run ./src/index.ts NODE_ENV=development",
     "prod": "bun --hot run ./src/index.ts NODE_ENV=production",
-    "build": "tsc",
+    "build": "bun build --entrypoints ./src/index.ts --outdir ./build --target bun",
     "test": "bun test --watch",
     "prepare": "husky install",
     "create-hook": "husky add .husky/pre-commit \"bun test\""
