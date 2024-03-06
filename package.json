@@ -8,7 +8,8 @@
     "start": "nodemon --exec ts-node src/index.ts",
     "build": "tsc",
     "prepare": "husky install",
-    "create-hook": "husky add .husky/pre-commit"
+    "create-hook": "husky add .husky/pre-commit",
+    "vercel-build": "echo hello"
   },
   "author": "Haba",
   "license": "MIT",

@@ -25,3 +25,5 @@ app.use(errorMiddleware);
 app.listen(PORT, () => {
     $log.info(`Servidor escuchando en http://localhost:${PORT}`);
 });
+
+export default app;
